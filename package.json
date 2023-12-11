@@ -1,0 +1,8 @@
+{
+  "name": "premier-league",
+  "version": "1.0.0",
+  "description": "Premier league web app",
+  "main": "index.js",
+  "author": "Jay",
+  "license": "MIT"
+}
