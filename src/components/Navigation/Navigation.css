@@ -1,0 +1,94 @@
+/* Navigation.css */
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: -50px; /* Initially hidden on desktop */
+  width: 50px;
+  height: 100%;
+  background-color: #333;
+  transition: left 0.3s ease;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 28px;
+  right: 16px;
+  flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer;
+  background: white;
+  border: black 2px solid;
+  width: 48px;
+  padding: 12px 8px 8px 8px;
+}
+
+.toggle-button .bar {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  margin: 0 0 4px 0;
+  transition: 0.4s;
+}
+
+.nav-container.open {
+  left: 0; /* Display on desktop when open */
+  width: 180px;
+}
+
+.nav-container ul {
+  list-style-type: none;
+}
+
+.nav-container li {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.nav-container a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-container a:hover {
+  color: #ccc;
+}
+
+.label {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+}
+
+/* Show label on hover */
+.nav-container:hover .label {
+  opacity: 1;
+}
+
+/* Responsive styles for larger screens */
+@media (min-width: 768px) {
+  .nav-container {
+    position: inherit;
+    top: unset;
+    left: unset; /* Initially hidden on desktop */
+    width: unset;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease;
+  }
+
+  .nav-container.open {
+    left: unset; /* Display on desktop when open */
+    width: unset;
+  }
+
+  .nav-container nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
