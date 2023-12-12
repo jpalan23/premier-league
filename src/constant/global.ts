@@ -1,0 +1,5 @@
+export const GLOBAL_CONSTANT = {
+  API_BASE_PATH: "/v3",
+  BASE_LEAGUE: 501,
+  CURRENT_SEASON: 21787,
+};
